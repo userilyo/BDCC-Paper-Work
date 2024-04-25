@@ -1,0 +1,545 @@
+%  LaTeX support: latex@mdpi.com 
+%  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
+
+%=================================================================
+\documentclass[journal,article,submit,pdftex,moreauthors]{Definitions/mdpi} 
+
+%--------------------
+% Class Options:
+%--------------------
+%----------
+% journal
+%----------
+% Choose between the following MDPI journals:
+% acoustics, actuators, addictions, admsci, adolescents, aerobiology, aerospace, agriculture, agriengineering, agrochemicals, agronomy, ai, air, algorithms, allergies, alloys, analytica, analytics, anatomia, animals, antibiotics, antibodies, antioxidants, applbiosci, appliedchem, appliedmath, applmech, applmicrobiol, applnano, applsci, aquacj, architecture, arm, arthropoda, arts, asc, asi, astronomy, atmosphere, atoms, audiolres, automation, axioms, bacteria, batteries, bdcc, behavsci, beverages, biochem, bioengineering, biologics, biology, biomass, biomechanics, biomed, biomedicines, biomedinformatics, biomimetics, biomolecules, biophysica, biosensors, biotech, birds, bloods, blsf, brainsci, breath, buildings, businesses, cancers, carbon, cardiogenetics, catalysts, cells, ceramics, challenges, chemengineering, chemistry, chemosensors, chemproc, children, chips, cimb, civileng, cleantechnol, climate, clinpract, clockssleep, cmd, coasts, coatings, colloids, colorants, commodities, compounds, computation, computers, condensedmatter, conservation, constrmater, cosmetics, covid, crops, cryptography, crystals, csmf, ctn, curroncol, cyber, dairy, data, ddc, dentistry, dermato, dermatopathology, designs, devices, diabetology, diagnostics, dietetics, digital, disabilities, diseases, diversity, dna, drones, dynamics, earth, ebj, ecologies, econometrics, economies, education, ejihpe, electricity, electrochem, electronicmat, electronics, encyclopedia, endocrines, energies, eng, engproc, entomology, entropy, environments, environsciproc, epidemiologia, epigenomes, est, fermentation, fibers, fintech, fire, fishes, fluids, foods, forecasting, forensicsci, forests, foundations, fractalfract, fuels, future, futureinternet, futurepharmacol, futurephys, futuretransp, galaxies, games, gases, gastroent, gastrointestdisord, gels, genealogy, genes, geographies, geohazards, geomatics, geosciences, geotechnics, geriatrics, grasses, gucdd, hazardousmatters, healthcare, hearts, hemato, hematolrep, heritage, higheredu, highthroughput, histories, horticulturae, hospitals, humanities, humans, hydrobiology, hydrogen, hydrology, hygiene, idr, ijerph, ijfs, ijgi, ijms, ijns, ijpb, ijtm, ijtpp, ime, immuno, informatics, information, infrastructures, inorganics, insects, instruments, inventions, iot, j, jal, jcdd, jcm, jcp, jcs, jcto, jdb, jeta, jfb, jfmk, jimaging, jintelligence, jlpea, jmmp, jmp, jmse, jne, jnt, jof, joitmc, jor, journalmedia, jox, jpm, jrfm, jsan, jtaer, jvd, jzbg, kidneydial, kinasesphosphatases, knowledge, land, languages, laws, life, liquids, literature, livers, logics, logistics, lubricants, lymphatics, machines, macromol, magnetism, magnetochemistry, make, marinedrugs, materials, materproc, mathematics, mca, measurements, medicina, medicines, medsci, membranes, merits, metabolites, metals, meteorology, methane, metrology, micro, microarrays, microbiolres, micromachines, microorganisms, microplastics, minerals, mining, modelling, molbank, molecules, mps, msf, mti, muscles, nanoenergyadv, nanomanufacturing,\gdef\@continuouspages{yes}} nanomaterials, ncrna, ndt, network, neuroglia, neurolint, neurosci, nitrogen, notspecified, %%nri, nursrep, nutraceuticals, nutrients, obesities, oceans, ohbm, onco, %oncopathology, optics, oral, organics, organoids, osteology, oxygen, parasites, parasitologia, particles, pathogens, pathophysiology, pediatrrep, pharmaceuticals, pharmaceutics, pharmacoepidemiology,\gdef\@ISSN{2813-0618}\gdef\@continuous pharmacy, philosophies, photochem, photonics, phycology, physchem, physics, physiologia, plants, plasma, platforms, pollutants, polymers, polysaccharides, poultry, powders, preprints, proceedings, processes, prosthesis, proteomes, psf, psych, psychiatryint, psychoactives, publications, quantumrep, quaternary, qubs, radiation, reactions, receptors, recycling, regeneration, religions, remotesensing, reports, reprodmed, resources, rheumato, risks, robotics, ruminants, safety, sci, scipharm, sclerosis, seeds, sensors, separations, sexes, signals, sinusitis, skins, smartcities, sna, societies, socsci, software, soilsystems, solar, solids, spectroscj, sports, standards, stats, std, stresses, surfaces, surgeries, suschem, sustainability, symmetry, synbio, systems, targets, taxonomy, technologies, telecom, test, textiles, thalassrep, thermo, tomography, tourismhosp, toxics, toxins, transplantology, transportation, traumacare, traumas, tropicalmed, universe, urbansci, uro, vaccines, vehicles, venereology, vetsci, vibration, virtualworlds, viruses, vision, waste, water, wem, wevj, wind, women, world, youth, zoonoticdis 
+% For posting an early version of this manuscript as a preprint, you may use "preprints" as the journal. Changing "submit" to "accept" before posting will remove line numbers.
+
+%---------
+% article
+%---------
+% The default type of manuscript is "article", but can be replaced by: 
+% abstract, addendum, article, book, bookreview, briefreport, casereport, comment, commentary, communication, conferenceproceedings, correction, conferencereport, entry, expressionofconcern, extendedabstract, datadescriptor, editorial, essay, erratum, hypothesis, interestingimage, obituary, opinion, projectreport, reply, retraction, review, perspective, protocol, shortnote, studyprotocol, systematicreview, supfile, technicalnote, viewpoint, guidelines, registeredreport, tutorial
+% supfile = supplementary materials
+
+%----------
+% submit
+%----------
+% The class option "submit" will be changed to "accept" by the Editorial Office when the paper is accepted. This will only make changes to the frontpage (e.g., the logo of the journal will get visible), the headings, and the copyright information. Also, line numbering will be removed. Journal info and pagination for accepted papers will also be assigned by the Editorial Office.
+
+%------------------
+% moreauthors
+%------------------
+% If there is only one author the class option oneauthor should be used. Otherwise use the class option moreauthors.
+
+%---------
+% pdftex
+%---------
+% The option pdftex is for use with pdfLaTeX. Remove "pdftex" for (1) compiling with LaTeX & dvi2pdf (if eps figures are used) or for (2) compiling with XeLaTeX.
+
+%=================================================================
+% MDPI internal commands - do not modify
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2024}
+\copyrightyear{2024}
+%\externaleditor{Academic Editor: Firstname Lastname}
+\datereceived{ } 
+\daterevised{ } % Comment out if no revised date
+\dateaccepted{ } 
+\datepublished{ } 
+%\datecorrected{} % For corrected papers: "Corrected: XXX" date in the original paper.
+%\dateretracted{} % For corrected papers: "Retracted: XXX" date in the original paper.
+\hreflink{https://doi.org/} % If needed use \linebreak
+%\doinum{}
+%\pdfoutput=1 % Uncommented for upload to arXiv.org
+%\CorrStatement{yes}  % For updates
+
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, float, amsmath, amssymb, lineno, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, colortbl, soul, multirow, microtype, tikz, totcount, changepage, attrib, upgreek, array, tabularx, pbox, ragged2e, tocloft, marginnote, marginfix, enotez, amsthm, natbib, hyperref, cleveref, scrextend, url, geometry, newfloat, caption, draftwatermark, seqsplit
+% cleveref: load \crefname definitions after \begin{document}
+
+%=================================================================
+% Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition, Notation, Assumption
+%% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{ICD prediction from MIMIIC-III clinical text using pre-trained clinicalBERT and NLP deep learning models achieving state-of-the-art.}
+
+% MDPI internal command: Title for citation in the left column
+\TitleCitation{Title}
+
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0002-8463-4443} % Add \orcidA{} behind the author's name
+%\newcommand{\orcidauthorB}{0000-0000-0000-000X} % Add \orcidB{} behind the author's name
+
+% Authors, for the paper (add full first names)
+\Author{Ilyas ADEN $^{1}$\orcidA{}, Chris CHILD $^{2}$ and Carlos Reyes-Aldasoro CONSTANTINO $^{3}$}
+
+%\longauthorlist{yes}
+
+% MDPI internal command: Authors, for metadata in PDF
+\AuthorNames{Ilyas ADEN, Chris CHILD and Carlos Reyes-Aldasoro CONSTANTINO}
+
+% MDPI internal command: Authors, for citation in the left column
+\AuthorCitation{ADEN, I.; CHILD, C.; CONSTANTINO, C.}
+% If this is a Chicago style journal: Lastname, Firstname, Firstname Lastname, and Firstname Lastname.
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+$^{1}$ \quad ilyas.aden@city.ac.uk\\
+$^{2}$ \quad cchild@city.ac.uk\\
+$^{3}$ \quad constantino-carlos.reyes-aldasoro@city.ac.uk  \\
+City, University of London  \\ Department of Computer Science, \\ Northampton Square,\\ London EC1V 0HB, United Kingdom}
+
+% The commands \thirdnote{} till \eighthnote{} are available for further notes
+
+%\simplesumm{} % Simple summary
+
+%\conference{} % An extended version of a conference paper
+
+% Abstract (Do not insert blank lines, i.e. \\) 
+\abstract{The International Classification of Diseases (ICD) is a commonly used system for assigning diagnosis codes to patients' electronic health records. These codes help summarize diagnoses and procedures performed during a patient's hospital admission \cite{ref-journal12}. This paper creates an ICD code prediction based on the MIMIIC-III clinical text dataset. We developed a pipeline using natural language processing and our deep learning models to extract useful information from MIMIIC-III: Medical Information Mart for Intensive Care III (MIMIC-III), which is a large dataset, de-identified and publicly available collection of medical records \cite{ref-url1}. Our current system predicts diagnosis codes from unstructured information like discharge summaries including notes containing symptoms. We used state-of-the-art deep learning methods such as RNN, LSTM, BiLSTM \cite{ref-journal3} and BERT \cite{ref-journal11}  models after tokenising the clinical test with the Bio\_ClinicalBERT a pre-trained model from Hugging Face \cite{ref-journal20}. Our experiments used the MIMIC-III discharge dataset records to evaluate our approach. Employing the BERT model, our method accurately predicted the top 10 and top 50 diagnosis codes within the MIMIC-III data, achieving average accuracies of 88$\%$ and 80$\%$ respectively. In comparison to recent studies by Biseda and Kerang, as well as Gangavarapu, which reported F1 scores of 0.72 for predicting the top 10 ICD-10 codes \cite{ref-journal5}, our model demonstrated superior performance with an F1 score of 0.87. Similarly, for predicting the top 50 ICD-10 codes, previous research achieved an F1 score of 0.75 \cite{ref-journal1} \cite{ref-journal4}, whereas our method attained an F1 score of 0.81.These results further support that the deep learning models exhibit superior performance over conventional machine learning approaches in this domain, corroborating our findings. Predicting diagnoses early from notes could help doctors determine promising treatments, transforming traditional diagnosis-then-treatment care.}
+
+% Keywords
+\keyword{ICD prediction, NLP, deep learning models(RNN, LSTM, BERT)} 
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{J0101}
+%\MSC{}
+%\JEL{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Diversity
+%\LSID{\url{http://}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Applied Sciences
+%\featuredapplication{Authors are encouraged to provide a concise description of the specific application or a potential application of the work. This section is not mandatory.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Data
+%\dataset{DOI number or link to the deposited data set if the data set is published separately. If the data set shall be published as a supplement to this paper, this field will be filled by the journal editors. In this case, please submit the data set as a supplement.}
+%\datasetlicense{License under which the data set is made available (CC0, CC-BY, CC-BY-SA, CC-BY-NC, etc.)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Toxins
+%\keycontribution{The breakthroughs or highlights of the manuscript. Authors can write one or two sentences to describe the most important part of the paper.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Encyclopedia
+%\encyclopediadef{For entry manuscripts only: please provide a brief overview of the entry title instead of an abstract.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Advances in Respiratory Medicine
+%\addhighlights{yes}
+%\renewcommand{\addhighlights}{%
+
+%\noindent This is an obligatory section in “Advances in Respiratory Medicine”, whose goal is to increase the discoverability and readability of the article via search engines and other scholars. Highlights should not be a copy of the abstract, but a simple text allowing the reader to quickly and simplified find out what the article is about and what can be cited from it. Each of these parts should be devoted up to 2~bullet points.\vspace{3pt}\\
+%\textbf{What are the main findings?}
+% \begin{itemize}[labelsep=2.5mm,topsep=-3pt]
+% \item First bullet.
+% \item Second bullet.
+% \end{itemize}\vspace{3pt}
+%\textbf{What is the implication of the main finding?}
+% \begin{itemize}[labelsep=2.5mm,topsep=-3pt]
+% \item First bullet.
+% \item Second bullet.
+% \end{itemize}
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Introduction}\label{sec1}
+
+\subsection{Background}\label{subsec1}
+The MIMIC-III database stands as a significant tool for researchers, clinicians, and students keen on delving into critical care medicine to enhance patient outcomes. It offers access to real-world data, enabling the examination and hypothesis testing concerning the treatment of critically ill patients. With its application in over 1,000 research studies and citations in more than 3,500 scientific papers, its impact on medical research is profound. A distinct aspect of the MIMIC-III database is its inclusion of detailed clinical notes. These notes, composed by healthcare providers, offer narrative accounts of patient care, presenting deep insights into the management of critically ill patients. These narratives are instrumental in uncovering trends and patterns in patient treatment, enriching the database's value for research purposes \cite{ref-url2}.
+
+\subsection{Data exploratory and analysis}\label{subsec2}
+
+The MIMIC-II dataset showcases a broad spectrum of patient demographics, notably featuring a predominance of older adults and males. It encompasses a wide array of clinical notes, diagnostic codes, and possibly additional pertinent details. Below images explain summarise a detailed exploratory data analysis:
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.50\textwidth]{images/patient_age_distribution.png}
+\caption{\label{fig1}MIMIIC-III Patients Age Distribution}
+\end{figure}
+Figure 1 illustrates the age distribution of patients through a histogram, with a pronounced peak in the 60-70 age bracket. This suggests a predominant grouping of patients within this age interval. The data leans towards the right, indicating a larger share of older patients over younger ones.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.50\textwidth]{images/patient_gender.png}
+\caption{\label{fig2}Patients Gender}
+\end{figure}
+Figure 2 showcases a bar chart detailing the gender distribution within the dataset, comparing male (M) and female (F) patients. The male patient count is noticeably higher, as seen in the taller bar for males, highlighting a gender disparity in the dataset.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.50\textwidth]{images/notes_categories.png}
+\caption{\label{fig3}MIMIIC-III clinical notes catogories}
+\end{figure}
+Figure 3 offers a deeper dive into the dataset's notes categories, outlining a bar chart of the variety of note types, where "Nursing/other" emerges as the most frequent category.
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{images/Top10_diseases.png}
+\caption{\label{fig4}Example of top10 diseases}
+\end{figure} 
+Figure 4 features a bar chart displaying the Top10 diseases or ten most common ICD-9 diagnosis code as example. The chart, with the y-axis for occurrence counts and the x-axis for the codes, it shows a clear standout with the code 401.9 marking a significantly higher occurrence than its counterparts.
+These visualisations and statistics can help us and any researchers or analysts better understand the characteristics and structure of the MIMIIC III dataset before conducting further analyses.  \\
+
+For our study, two relevant tables will be considered: note-events and ICD-9 diagnosis.The note-events table has more than 2 million rows with columns for patient ID, admission ID, and discharge notes text. The notes contain details like medical history including symptoms, medications, lab tests, hospital course, and final diagnosis including the ICD-9 code made by doctors.
+The ICD diagnosis table has 651,000 rows with columns for patient ID, admission ID, and ICD-9 diagnosis codes. There are 6,984 unique codes. Each time a patient is admitted, they may receive between 1 and 38 diagnosis codes, which indicate the order of importance of their conditions and reasons for their visit \cite{ref-journal2}.
+In summary, the two key tables contain patient admission records with unstructured discharge note text and structured ICD-9 diagnosis codes for analysis and mapping between text and codes. The below table describes the size of the dataset and their respective unique values in the initial dataset.
+\begin{table}[h]
+\caption{MIMIC-III descriptive statistics}\label{tab1}%
+\begin{tabular}{@{}llll@{}}
+\toprule
+Category & Number of rows  & Unique values \\
+\midrule
+Notes-Events    & 2 083 180   & 2 023 185 \\
+Diagnosis    & 651047   & 6984 \\
+
+\botrule
+\end{tabular}
+\end{table}
+
+\subsection{Data processing}\label{subsec3}
+The first step was to examine the list of ICD-9 diagnosis codes present in the MIMIC-III dataset. Subsequently, these codes were matched with their respective ICD-10 counterparts, and the accuracy of this mapping was validated using a Python script.
+After that, the notes and diagnosis tables from MIMIC-III were merged based on unique patient and hospital admission IDs. This created a unified dataset with each patient's admission ID, ICD-10 codes, and discharge summary text.
+The data was then filtered to create multiple datasets: one with the top 10 ICD-10 codes by frequency, one with the top 50, and one with all codes. The distributions across these datasets were compared.
+To mitigate potential out-of-memory issues when processing the full dataset, smaller randomized samples of the data were taken such as 30\%, 70\%, and 100\% of the full dataset. This allows initial testing on smaller sizes before scaling up.
+The result of these steps was processed and sampled datasets containing patients' admission IDs, ICD-10 codes, and textual discharge summaries, ready for applying natural language processing and machine learning models to predict diagnosis codes from the text. 
+The multiple sampled datasets allow testing model performance at different data volumes.
+\begin{table}[h]
+\caption{Statistics for diagnosis tables with top 10 and top 50 prevalent codes}\label{tab2}%
+\begin{tabular}{@{}llll@{}}
+\toprule
+Category & Number of rows  & Unique values & Note-events(\%) \\
+\midrule
+Top10 Diagnosis    & 677738   & 10  & 32.5  \\
+Top50 Diagnosis   & 1058988  & 50  & 52.8 \\
+
+\botrule
+\end{tabular}
+\end{table}
+
+
+\section{Methodology}\label{sec2}
+Our methodology consists of the following steps: data pre-processing, building language model and classifier model. Specifically, we use Python 3.10 for data pre-processing: Python, NumPy, Pandas, and Sklearn for feature extraction; PyTorch is the main framework for training and testing models. We used Jupyter Notebooks to run our experiments on a private cloud platform called Runpod.io. The below schema describes the methodology used: 
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{images/image_1.jpg}
+\caption{\label{fig5}Methodology pipeline overview}
+\end{figure}
+The above figure depicts an overview of our methodology pipeline for processing and classifying medical text notes, likely from electronic health records, using machine learning models. Here is a brief explanation of all stages presented in our pipeline:
+\textbf{MIMIC-III Database:} This is a publicly available dataset that contains de-identified health-related data associated with over forty thousand patients who stayed in critical care units. The pipeline uses two main tables from this database: \\ \\
+\Item \texttt{- NOTEEVENTS:}
+This table includes admission text notes, which are free-text descriptions of patient encounters. \\
+\Item \texttt{- DIAGNOSIS-ICD:} 
+This table lists the ICD-9 diagnosis codes for the conditions diagnosed during the hospital stay. \\
+
+\textbf{Data Pre-processing:}
+Relevant data from the NOTEEVENTS and DIAGNOSIS-ICD tables are merged to create a new dataset.
+Stop words (commonly used words that usually don't contain important meaning, like "the", "is", etc.) are removed from the text to reduce noise and focus on significant words.
+The most common ICD-9 codes (Top 10/50) are extracted and then mapped to ICD-10, which is a more current and detailed classification system for medical diagnoses.
+The text from the notes is tokenised, which means it's split into meaningful pieces (tokens) such as words or terms, and then these tokens are associated with the corresponding diagnostic labels (this process is called label encoding).
+
+\textbf{Data Modelling:}
+BIO-CLINICALBERT is utilised as the primary tokenizer for the text notes. This is a version of the BERT model that has been pre-trained on biomedical and clinical text, making it more effective for understanding medical language.
+Classifier models are built, and their hyper-parameters are fine-tuned. Hyper-parameters are the settings for the algorithm that guide the training process and are set before the training starts.
+
+\textbf{Classifier:}
+Tokens generated from the text are used for classification purposes.
+The main classifier models mentioned are Recurrent Neural Networks (RNN), Long Short-Term Memory Networks (LSTM), Bidirectional LSTM (BiLSTM), and BERT (Bidirectional Encoder Representations from Transformers). These are different neural network architectures commonly used in natural language processing tasks.
+The performance of these models is analysed using metrics like the F1 score (a harmonic mean of precision and recall that balances the two), precision (the number of true positive results divided by the number of all positive results), and recall (the number of true positive results divided by the number of positives that should have been retrieved).
+Overall, this pipeline is a structured approach to converting free-text medical notes into structured data that can be analysed and used for various purposes, such as predicting diagnoses, by leveraging advanced machine learning techniques.
+
+\section{Experimental Setup}\label{sec3}
+\textbf{Data Splitting:}
+The dataset was split into 80\% training data and 20\% test data using the scikit-learn library in Python. This ensures we have sufficient data to train the models while holding out a subset to evaluate performance. The train-test split allows for an unbiased assessment of the models. \\
+\textbf{Input Encoding:}
+The text data was then encoded into numeric vectors suitable for machine learning using a pre-trained Bio-ClinicalBERT tokenizer from Hugging Face company. 
+This state-of-the-art language representation model is designed specifically for the biomedical domain, allowing it to better handle medical terminology. The texts were tokenised and encoded into input vectors for the training and test sets. \\
+\textbf{Model Selection:}
+Based on initial experiments, several model architectures were selected for comparison: recurrent neural networks (RNN), long short-term memory (LSTM), bi-directional LSTM, and BERT fine-tuning. These represent both traditional and cutting-edge deep learning approaches for NLP text classification tasks. \\
+\textbf{Evaluation Metric:}
+The weighted average F1 score was chosen as the single metric to track during experiments. F1 score balances both precision and recall while weighting accounts for class imbalance. This offers a comprehensive assessment of performance. Additionally, various performance metrics such as precision, recall, and accuracy values are utilised to assess disparities in performance across different datasets and classifier models. \\
+\textbf{Model Optimisation:}
+To improve results, various optimisation techniques were employed:
+· 	Hyper-parameter tuning to find optimal model configurations.
+· 	Error analysis to identify prediction pain points.
+· 	More aggressive data sampling strategies
+· 	Feature engineering such as text pre-processing
+· 	Regularization methods like dropout to prevent over-fitting.
+· 	Early stopping to halt training when the result is not improving.
+· 	Learning curves to determine if more training data is required. \\
+\textbf{Model Selection:}
+Finally, the best-performing model architecture was selected based on the experiments. The top model was retrained on the full 80\% training corpus and saved for future use. The pre-processed encodings were also retained for reuse in subsequent experiments. \\
+
+\section{Results and Discussions}\label{sec4}
+The table below illustrates the performance of each model concerning their respective datasets, focusing on the top-10 and top-50 ICD-10 codes for diagnosis.
+The performance of the top-10 ICD-10 prediction using BERT is better with accuracy above 87\% and 81\% when using a single LSTM model. However, we slightly dropped performance when we tried predicting top-50 ICD-10 as we have an accuracy of 81\% for the BERT model and 67\% for a single LSTM model. The precision and recall scores for the top 10 are also relatively better than the top 50 data. 
+In assessing these three metrics, our approach involves the calculation of average values rather than the examination of micro or macro-level data points.
+\begin{table}[h]
+\caption{Summary results of our experiments.}
+\label{tab1}
+\centering
+\begin{tabular}{lllll} % Add an extra "l" for the new column
+\toprule
+\textbf{Models} & \textbf{Diagnosis} & \textbf{Precision}(\%) & \textbf{Recall/Accuracy}(\%) & \textbf{F1 Score}(\%) \\ 
+\midrule
+RNN   & \textbf{Top10} &  24 &  26 &  25 \\
+LSTM      &&   \textbf{81}  &  \textbf{81}   &  \textbf{81}  \\
+BiLSTM    &&  78 &  78  &  78  \\
+BERT      &&  \textbf{87}  &  \textbf{87} &   \textbf{87} \\ \\
+RNN   & \textbf{Top50} &  8 &  8 &  5 \\
+LSTM  &&   \textbf{68}  &  \textbf{68}   &  \textbf{66}  \\
+BiLSTM  &&   65  &  65   &  65 \\
+BERT  &&   \textbf{81}  &  \textbf{81}   &  \textbf{80}  \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+Best results have been achieved using below hyperparameters after model-tuning:
+\begin{table}[h]
+\caption{Summary of best hyperparameters values.}
+\label{tab1}
+\centering
+\begin{tabular}{llp{8cm}} % Adjusted for 3 columns; p{8cm} for the hyperparameters column to manage text wrapping.
+\toprule
+\textbf{Models} & \textbf{Diagnosis} & \textbf{Hyperparameters} \\ 
+\midrule
+RNN & \textbf{Top10} & Batch\_size=16, epochs=10, embedding\_dim=128, hidden\_dim=256, optimizer='AdamW', activation='relu', dropout=0.4, lr=0.00002 \\
+LSTM &   & \textbf{Batch\_size=16, epochs=10, embedding\_dim=128, hidden\_dim=256,optimizer='AdamW', activation='relu',dropout=0.2,lr=0.00}  \\
+BiLSTM &  & Batch\_size=16, epochs=10, embedding\_dim=128, hidden\_dim=256, optimizer='AdamW', activation='relu', dropout=0.2, lr=0.001  \\
+BERT &  & \textbf{Batch\_size=16, epochs=10, embedding\_dim=128, hidden\_dim=256,optimizer='AdamW', activation='relu',dropout=0.4,lr=0.001}   \\ \\
+RNN & \textbf{Top50} & Batch\_size=16, epochs=10, embedding\_dim=128, hidden\_dim=256, optimizer='AdamW', activation='relu', dropout=0.4, lr=0.00002  \\
+LSTM &  & \textbf{Batch\_size=16, epochs=10, embedding\_dim=128, hidden\_dim=256,optimizer='AdamW', activation='relu',dropout=0.2,lr=0.001}  \\
+BiLSTM &  & Batch\_size=16, epochs=10, embedding\_dim=128, hidden\_dim=256, optimizer='AdamW', activation='relu', dropout=0.2, lr=0.001  \\
+BERT &  & \textbf{Batch\_size=16, epochs=10, embedding\_dim=128, hidden\_dim=256,optimizer='AdamW', activation='relu',dropout=0.4,lr=0.001}    \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+This last table provides a summary of the best hyperparameters for different models, including RNN, LSTM, BiLSTM, and BERT, with both top 10 and top 50 diagnoses. The hyperparameters include batch size, number of epochs, embedding dimension, hidden dimension, optimizer, activation function, dropout rate, and learning rate.
+
+In our study, we found that models previously considered as having lower performance exhibited suboptimal results primarily because of inadequately chosen hyperparameters and the absence of fine-tuning the decision boundary. Through our updated comparison, we illustrated that when we trained our models using our configuration, it led to a reduction in the gap between the highest and lowest F1 scores. This confirms the results collected in the latest ICD-10 prediction research \cite{ref-journal3}. 
+Additionally, Figure 6 and Figures 7, and 8 illustrate the precision, recall and F-1 score for LSTM/BERT classifiers built. Overall, the classifier with the top 10 diagnoses has higher scores when compared to the classifier with the top 50 diagnoses.
+\begin{figure}[H]
+\centering
+    \begin{figure}
+        \includegraphics[width=\textwidth]{images/image1.png}
+        \caption{Top 10 ICD predictions using LSTM model.}
+        \label{fig:first_image}
+    \end{figure}
+    \hfill % This ensures that there is some space between the two figures
+    \begin{figure}
+        \includegraphics[width=\textwidth]{images/image2.png}
+        \caption{Top 10 ICD predictions using BERT model.}
+        \label{fig:second_image}
+    \end{figure}
+    %\caption{Top 10 ICD predictions models comparaison.}
+\end{figure}
+\begin{figure}[H]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+    \begin{subfigure}
+        \centering
+        \includegraphics[width=10.5cm]{images/image3.png}
+        \label{fig:image3}
+    \end{subfigure}%
+    \vspace{-2.5mm} % Adjust the negative value as needed to reduce whitespace
+    \begin{subfigure}
+        \centering
+        \includegraphics[width=10.5cm]{images/image4.png}
+        \label{fig:image4}
+    \end{subfigure}
+\end{adjustwidth}
+\caption{Top50 ICD prediction using LSTM model.}
+\label{fig:images}
+\end{figure}
+\begin{figure}[H]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+    \begin{subfigure}
+        \centering
+        \includegraphics[width=10.5cm]{images/image5.png}
+        \label{fig:image3}
+    \end{subfigure}%
+    \vspace{-2.5mm} % Adjust the negative value as needed to reduce whitespace
+    \begin{subfigure}
+        \centering
+        \includegraphics[width=10.5cm]{images/image6.png}
+        \label{fig:image4}
+    \end{subfigure}
+\end{adjustwidth}
+\caption{Top50 ICD prediction using BERT model.}
+\label{fig:images}
+\end{figure}
+
+Previous studies have explored the feasibility of deep learning models for predicting ICD-10 codes. However, it is important to note that these deep learning models did not demonstrate high performance when applied to the MIMIC-III database. \\ \\
+The below table compares the main previous experiments and our results: \\
+\afterpage{
+\begin{table}[!htbp]
+\caption{Comparative evaluation of different studies from the literature review \cite{ref-journal15}.}
+\label{tab1}
+\centering
+\small % Reduce font size to fit more content
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Work} & \textbf{Data} & \textbf{Method} & \textbf{Target Variable} & \textbf{Performance Measures} \\
+\midrule
+Hsu et al.\cite{ref-journal8} & Discharge summary & Deep Learning & (I) 19 distinct ICD-9 chapter codes, (II) Top 50 ICD-9 codes, (III) Top 100 ICD-9 codes & (I) Micro F1 score of 0.76, (II) Micro F1 score of 0.57, (III) Micro F1 score of 0.51 \\
+Gangavarapu et al.\cite{ref-journal6} & Nursing notes & Deep Learning & 19 distinct ICD-9 chapter codes & Accuracy of 0.833 \\
+Samonte et al.\cite{ref-journal15} & Discharge summary & Deep Learning & 10 distinct ICD-9 codes & Precision of 0.780, Recall of 0.620, F1 score of 0.678 \\
+Obeid et al.\cite{ref-journal10} & Clinical notes & Deep Learning & ICD-9 code from E950-E959 & Area under the ROC curve score of 0.882, F1 score of 0.769 \\
+Hsu et al.\cite{ref-journal8} & Subjective component & Deep Learning & (I) 17 distinct ICD-9 chapter codes, (II) 2017 distinct ICD-9 codes & (I)  Accuracy of 0.580, (II) Accuracy of 0.409 \\
+Xie et al.\cite{ref-journal17} & Diagnosis description & Deep Learning & 2833 ICD-9 codes & Sensitivity score of 0.29, Specificity score of 0.33 \\
+Singaravelan et al.\cite{ref-journal16} & Subjective component & Deep Learning & 1871 ICD-9 codes & Recall score for chapter code is 0.57, Recall score for block is 0.49, Recall score for three-digit code is 0.43, Recall score for full code is 0.45 \\
+Zeng et al.\cite{ref-journal18} & Discharge summary & Deep Learning & 6984 ICD-9 codes & F1 score of 0.42 \\
+Huang et al.\cite{ref-journal7} & Discharge summary & Deep Learning & (I) 10 ICD-9 codes, (II) 10 blocks 1131 ICD-10 codes & (I) F1 score of 0.69, (II) F1 score of 0.72 \\
+Current study & Discharge summary & Deep Learning & (I) Top 10 ICD-10 codes, (II) Top 50 ICD-10 codes & (I) Precision of 0.88, Recall of 0.88, F1-score of 0.88, (II) Precision of 0.81, Recall of 0.81, F1 score of 0.80 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+}
+\section{Limitation and future work}\label{sec5}
+ One of the main challenges we faced during work was a lack of resources to run the high-end operations. Indeed, handling 7 GB of MIMIIC-III data (26 tables) demands a quantity number of resources and time. The RunPods.io platform RTX A6000, a new GPU enabled me to move forward from any limited-resources environment. Future work relies on the prediction of ICD or diagnosis, using an ensemble model unlike that of the single models predicting diagnosis distinctly. Also, some refinements are to be made to enhance the accuracy and performance of the model when the top 20, top 50 or even more than 100 diagnoses would be used. Additionally, we can consider a k-fold cross-validation approach instead of using the classical approach of an 80\%-20\% split of training/test datasets.
+
+\section{Conclusion}\label{sec6}
+In conclusion, this research examines the efficacy of deep learning models such as LSTM and BERT architectures, specifically the BERT model, for automated extraction of medical concepts from clinical notes in the MIMIC-III database. Empirical results demonstrate that deep learning natural language processing techniques can effectively encode clinical texts and assign appropriate ICD codes without manual supervision. The proposed methodology establishes a competitive baseline for concept extraction, achieving strong diagnostic code prediction from discharge summaries. Compared to the Top10 ICD code prediction \cite{ref-journal6} with an F1 score of 0.72, we achieved a better F1 score of 0.87. Also similarly, in comparison to the Top-50 ICD code prediction \cite{ref-journal1}\cite{ref-journal4} with an F1 score of 0.75, we achieve a final F1 score of 0.81. Moreover, the generalisability of the current LSTM/BERT models creates promise for holistic, unified systems that can extract multiple data types such as diagnosis codes, simultaneously from unstructured electronic health records. This research thereby underscores the capability of artificial intelligence methods to unlock clinical knowledge from textual data sources and meaningfully impact healthcare delivery. Furthermore, Large language models (LLMs) have shown the potential to accelerate clinical curation via few-shot in-context learning. 
+Indeed, in the latest paper of Zelalem et al.\cite{ref-journal19}, self-verification represents a crucial milestone in harnessing the capabilities of Large Language Models (LLMs) within healthcare contexts. As LLMs consistently enhance their overall performance, the use of LLMs in clinical data extraction combined with self-verification (LLMs + SV) is poised to see notable improvements.
+
+
+
+\reftitle{References}
+
+% Please provide either the correct journal abbreviation (e.g. according to the “List of Title Word Abbreviations” http://www.issn.org/services/online-services/access-to-the-ltwa/) or the full name of the journal.
+% Citations and References in Supplementary files are permitted provided that they also appear in the reference list here. 
+
+%=====================================
+% References, variant A: external bibliography
+%=====================================
+%\bibliography{your_external_BibTeX_file}
+
+%=====================================
+% References, variant B: internal bibliography
+%=====================================
+\begin{thebibliography}{999}
+% Reference 1
+\bibitem[Author1(year)]{ref-journal1}
+Brent Biseda, Gaurav Desai, Haifeng Lin, and Anish Philip. Prediction of ICD Codes with Clinical BERT Embeddings and Text Augmentation with Label-Balancing-using-MIMIC-III. {\em arXiv:2008.10492} {\bf 2020}.
+
+% Reference 2
+\bibitem[Author2(year)]{ref-journal2}
+Choi, E., Schuetz, A., Stewart, W. F., & Sun, J. Using recurrent neural network models for early detection of heart failure onset. {\em J Am Med Inform Assoc,} 24(2), 361-370.{\bf 2017}.{\em doi:10.1093/jamia/ocw112}
+
+% Reference 3
+\bibitem[Author3(year)]{ref-journal3}
+Choi, Y., & Kang, S. A systematic review of deep learning-based automated diagnosis of neurologic disorders using EEG signals. {\em BMC Medical Informatics and Decision Making,} 22(1), 1-18.{\bf 2022}
+
+% Reference 4
+\bibitem[Author4(year)]{ref-journal4}
+Edin, Joakim & Junge, Alexander & Drachmann Havtorn, Jakob & Borgholt, Lasse & Maistro, Maria & Ruotsalo, Tuukka & Maaløe, Lars. {\bf 2023} {\em Automated Medical Coding on MIMIC-III and MIMIC-IV: A Critical Review and Replicability Study,} 2572-2582. 10.1145/3539618.3591918.
+
+% Reference 5
+\bibitem[Author4(year)]{ref-journal5}
+Keyang Xu, et. al. Multimodal Machine Learning for Automated ICD Coding. {\em Proceedings of Machine Learning Research.} 106:1-17. {\bf 2019}
+
+% Reference 6
+\bibitem[Author6(year)]{ref-journal6}
+Gangavarapu, T.; Krishnan, G.S.; Kamath, S.; Jeganathan, J. FarSight: Long-Term Disease Prediction Using Unstructured Clinical Nursing Notes. {\em IEEE Trans. Emerg. Top. Comput.} {\bf 2020}, 9, 1151–1169.
+
+% Reference 7
+\bibitem[Author7(year)]{ref-journal7}
+Huang, J.; Osorio, C.; Sy, L.W. An empirical evaluation of deep learning for ICD-9 code assignment using MIMIC-III clinical notes. {\em Comput. Methods Programs Biomed.} {\bf 2019}, 177, 141–153.
+
+% Reference 8
+\bibitem[Author8(year)]{ref-journal8}
+Hsu, C.C.; Chang, P.C.; Chang, A. Multi-Label Classification of ICD Coding Using Deep Learning. {\em In Proceedings of the International Symposium on Community-Centric Systems (CcS), Tokyo, Japan,} {\bf 23–26 September 2020;} pp. 1–6.
+
+% Reference 9
+\bibitem[Author9(year)]{ref-journal9}
+Hsu, J.L.; Hsu, T.J.; Hsieh, C.H.; Singaravelan, A. Applying Convolutional Neural Networks to Predict the ICD-9 Codes of Medical Records. {\em Sensors} {\bf 2020}, 20, 7116.
+
+% Reference 10
+\bibitem[Author10(year)]{ref-journal10}
+Obeid, J.S.; Dahne, J.; Christensen, S.; Howard, S.; Crawford, T.; Frey, L.J.; Stecker, T.; Bunnell, B.E. Identifying and Predicting intentional self-harm in electronic health record clinical notes: Deep learning approach. {\em JMIR Med. Inform.} {\bf 202}0, 8, e17784.
+
+% Reference 11
+\bibitem[Author11(year)]{ref-journal11}
+Lee, J., Shin, H., & Kim, Y. {\bf 2020}. The Effects of Hyperparameters in Deep Learning on Medical Dataset: A Case Study on EMR. {\em arXiv preprint arXiv:2009.05451.} https://arxiv.org/abs/2009.05451
+
+% Reference 12
+\bibitem[Author12(year)]{ref-journal12}
+Masud, J.H.B.; Kuo, C.-C.; Yeh, C.-Y.; Yang, H.-C.; Lin, M.-C. Applying Deep Learning Model to Predict Diagnosis Code of Medical Records. {\em Diagnostics} {\bf 2023}, 13,2297.-https://doi.org/10.3390/diagnostics13132297
+
+% Reference 13
+\bibitem[Author13(year)]{ref-url1}
+National Health Service. {\bf 2022}. International Statistical Classification of Diseases and Related Health Problems, 10th Revision (ICD-10), 5th Edition. {\em Retrieved from: https://classbrowser.nhs.uk/ref_books/ICD-10_2022_5th_Ed_NCCS.pdf }
+
+% Reference 14
+\bibitem[Author14(year)]{ref-url2}
+PhysioNet. {\bf 2016}. MIMIC-III Clinical Database (version 1.4). {\em Retrieved from:
+ https://physionet.org/content/mimiciii/1.4/ }
+
+% Reference 15
+\bibitem[Author15(year)]{ref-journal15}
+Samonte, M.J.C.; Gerardo, B.D.; Fajardo, A.C.; Medina, R.P. ICD-9 tagging of clinical notes using topical word embedding. {\em In Proceedings of the 2018 International Conference on Internet and e-Business, Taipei, Taiwan,} {\bf 16–18 May 2018;} pp. 118–123.
+
+% Reference 16
+\bibitem[Author16(year)]{ref-journal16}
+Singaravelan, A.; Hsieh, C.-H.; Liao, Y.-K.; Hsu, J.L. {\em Predicting ICD-9 Codes Using Self-Report of Patients. Appl. Sci.} {\bf 2021}, 11, 10046.
+
+% Reference 17
+\bibitem[Author17(year)]{ref-journal17}
+Xie, P.; Xing, E. A Neural Architecture for Automated ICD Coding. {\em In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), Melbourne, Australia,} {\bf 15–20 July 2018}; Association for Computational Linguistics: Melbourne, Australia, 2018; pp. 1066–1076.
+
+% Reference 18
+\bibitem[Author18(year)]{ref-journal18}
+Zeng, M.; Li, M.; Fei, Z.; Yu, Y.; Pan, Y.; Wang, J. Automatic ICD-9 coding via deep transfer learning. {\em Neurocomputing} {\bf 2019}, 324, 43–50.
+
+% Reference 19
+\bibitem[Author19(year)]{ref-journal19}
+Zelalem Gero, Chandan Singh, Hao Cheng, Tristan Naumann, Michel Galley, Jianfeng Gao, Hoifung Poon, {\bf May 2023}, Self-Verification Improves Few-Shot Clinical Information Extraction. {\em https://arxiv.org/abs/2306.00024 }
+
+% Reference 20
+\bibitem[Author20(year)]{ref-journal20}
+Zhao, B., Qiu, T., Wu, Q., & Wang, W. {\bf 2019}. Attention-Based Multi-Modal Fusion for Explainable Recommendation. {\em arXiv preprint arXiv:1904.03323.} https://arxiv.org/abs/1904.03323
+
+\end{thebibliography}
+
+% If authors have biography, please use the format below
+%\section*{Short Biography of Authors}
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author1.pdf}}}
+%{\textbf{Firstname Lastname} Biography of first author}
+%
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author2.jpg}}}
+%{\textbf{Firstname Lastname} Biography of second author}
+
+% For the MDPI journals use author-date citation, please follow the formatting guidelines on http://www.mdpi.com/authors/references
+% To cite two works by the same author: \citeauthor{ref-journal-1a} (\citeyear{ref-journal-1a}, \citeyear{ref-journal-1b}). This produces: Whittaker (1967, 1975)
+% To cite two works by the same author with specific pages: \citeauthor{ref-journal-3a} (\citeyear{ref-journal-3a}, p. 328; \citeyear{ref-journal-3b}, p.475). This produces: Wong (1999, p. 328; 2000, p. 475)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% for journal Sci
+%\reviewreports{\\
+%Reviewer 1 comments and authors’ response\\
+%Reviewer 2 comments and authors’ response\\
+%Reviewer 3 comments and authors’ response
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\PublishersNote{}
+
+\end{document}
+
